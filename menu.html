@@ -1,170 +1,262 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wine List｜イタリアン Wine Bar ChibaTech</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu｜イタリアン Wine Bar ChibaTech</title>
+
+  <!-- Bootstrap (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your custom CSS (kept minimal) -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo-block"> <img src="images/rogo3.png" alt="イタリアン Wine Bar ChibaTech ロゴ"> </div>
-    <div class="header-info">
-      <p class="catch">イタリアン Wine Bar ChibaTech</p>
-      <p class="open-time">Today 17:00 – 23:00 / L.O. 22:30</p>
-      <p class="tel">Tel: 000-1234-5678</p>
+<body class="bg-warm">
+
+<header class="site-header shadow-sm">
+  <div class="container py-3">
+    <div class="d-flex align-items-center gap-3">
+      <div class="logo-block">
+        <img src="images/rogo3.png" alt="イタリアン Wine Bar ChibaTech ロゴ" height="70">
+      </div>
+      <div class="header-info text-white">
+        <p class="mb-0 fw-bold fs-5">イタリアン Wine Bar ChibaTech</p>
+        <p class="mb-0 opacity-90">Today 17:00 – 23:00 / L.O. 22:30</p>
+        <p class="mb-0 fw-bold">Tel: 000-1234-5678</p>
+      </div>
     </div>
   </div>
-  <nav class="global-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">ホーム</a></li>
-      <li class="has-dropdown"> <a href="#">メニュー</a>
-        <ul class="dropdown">
-          <li><a href="menu.html#antipasto">前菜</a></li>
-          <li><a href="menu.html#hotdish">温かい料理</a></li>
-          <li><a href="menu.html#pasta">パスタ</a></li>
-          <li><a href="menu.html#course">コース</a></li>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom border-gold">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#globalNav"
+              aria-controls="globalNav" aria-expanded="false" aria-label="ナビゲーションを切り替え">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="globalNav">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 fw-bold">
+          <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="menu.html" id="menuDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              メニュー
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDrop">
+              <li><a class="dropdown-item" href="#antipasto">前菜</a></li>
+              <li><a class="dropdown-item" href="#hotdish">温かい料理</a></li>
+              <li><a class="dropdown-item" href="#pasta">パスタ</a></li>
+              <li><a class="dropdown-item" href="#course">コース</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="wine.html" id="wineDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ワイン
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="wineDrop">
+              <li><a class="dropdown-item" href="wine.html#red">Red Wine</a></li>
+              <li><a class="dropdown-item" href="wine.html#white">White Wine</a></li>
+              <li><a class="dropdown-item" href="wine.html#sparkling">Sparkling</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="access.html">アクセス</a></li>
         </ul>
-      </li>
-      <li class="has-dropdown"> <a href="wine.html">ワイン</a>
-        <ul class="dropdown">
-          <li><a href="#red">Red Wine</a></li>
-          <li><a href="#white">White Wine</a></li>
-          <li><a href="#sparkling">Sparkling</a></li>
-        </ul>
-      </li>
-      <li><a href="access.html">アクセス</a></li>
-    </ul>
+      </div>
+    </div>
   </nav>
 </header>
-<main id="menu-page">
-  <section class="section">
-    <div class="section-inner">
-      <h2>料理</h2>
-      <p>ワインに合う小皿料理からしっかり食べられるパスタまでご用意しています。</p>
-    </div>
+
+<main class="py-5">
+  <section class="container mb-4">
+    <h2 class="section-title mb-2">料理</h2>
+    <p class="mb-0">ワインに合う小皿料理からしっかり食べられるパスタまでご用意しています。</p>
   </section>
-  
-  <!-- ======================
-              Antipasto（前菜）
-        ======================= -->
-  <section class="menu-section"><br>
-    <br>
-    <h2 id="antipasto">前菜</h2>
-    <div class="menu-grid">
-      <div class="menu-card"> <img src="images/お通しのパンとオリーブオイル.jpg" alt="お通し">
-        <div class="menu-desc">
-          <h4>お通しパンとオリーブオイル</h4>
-          <span class="price">¥400</span>
-          <p>香りの良いオイルとともにお楽しみください。</p>
+
+  <!-- Antipasto -->
+  <section class="container py-4">
+    <h2 id="antipasto" class="section-title mb-3">前菜</h2>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/お通しのパンとオリーブオイル.jpg" alt="お通し" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">お通しパンとオリーブオイル</h4>
+              <span class="price fw-bold">¥400</span>
+            </div>
+            <p class="mb-0 small">香りの良いオイルとともにお楽しみください。</p>
+          </div>
         </div>
       </div>
-      <div class="menu-card"> <img src="images/フレッシュなサラダ.jpg" alt="サラダ">
-        <div class="menu-desc">
-          <h4>フレッシュサラダ</h4>
-          <span class="price">¥1200</span>
-          <p>季節野菜を使った最初の一皿。さっぱりとワインに合う味わいです。</p>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/フレッシュなサラダ.jpg" alt="サラダ" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">フレッシュサラダ</h4>
+              <span class="price fw-bold">¥1200</span>
+            </div>
+            <p class="mb-0 small">季節野菜を使った最初の一皿。さっぱりとワインに合う味わいです。</p>
+          </div>
         </div>
       </div>
-      <div class="menu-card"> <img src="images/生ハム.jpg" alt="生ハム">
-        <div class="menu-desc">
-          <h4>イタリア産 生ハム</h4>
-          <span class="price">¥700</span>
-          <p>香り豊かな生ハムを切りたてでご提供します。</p>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/生ハム.jpg" alt="生ハム" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">イタリア産 生ハム</h4>
+              <span class="price fw-bold">¥700</span>
+            </div>
+            <p class="mb-0 small">香り豊かな生ハムを切りたてでご提供します。</p>
+          </div>
         </div>
       </div>
-      <div class="menu-card"> <img src="images/こだわり1.jpg" alt="前菜盛り合わせ">
-        <div class="menu-desc">
-          <h4>前菜盛り合わせ</h4>
-          <span class="price">¥500</span>
-          <p>日替わりの小皿を彩り良く盛り合わせました。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- ======================
-              Hot Dish（温かい料理）
-        ======================= -->
-  <section class="menu-section">
-    <h2 id="hotdish">温かい料理</h2>
-    <div class="menu-grid">
-      <div class="menu-card"> <img src="images/ガーリックトーストとワイン.jpg" alt="ガーリックトースト">
-        <div class="menu-desc">
-          <h4>ガーリックトースト</h4>
-          <span class="price">¥400</span>
-          <p>赤ワインと相性抜群。追加に人気です。</p>
-        </div>
-      </div>
-      <div class="menu-card"> <img src="images/アヒージョ.jpg" alt="アヒージョ">
-        <div class="menu-desc">
-          <h4>海老のアヒージョ</h4>
-          <span class="price">¥2100</span>
-          <p>熱々のガーリックオイルで仕上げた定番の一品。</p>
-        </div>
-      </div>
-      <div class="menu-card"> <img src="images/国産牛ローストビーフオニオンソース.jpg" alt="ローストビーフ">
-        <div class="menu-desc">
-          <h4>国産牛ローストビーフ 温玉のせ</h4>
-          <span class="price">¥2800</span>
-          <p>まろやかな温玉がとろけて、ワインとの相性も抜群の一皿です。</p>
-        </div>
-      </div>
-      <div class="menu-card"> <img src="images/豚カシラ肉の柔らかグリル.jpg" alt="豚カシラ肉">
-        <div class="menu-desc">
-          <h4>豚カシラ肉の柔らかグリル</h4>
-          <span class="price">¥1600</span>
-          <p>豚カシラをしっとり柔らかく焼き上げ、ハーブ香るオイルで仕上げました。</p>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/こだわり1.jpg" alt="前菜盛り合わせ" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">前菜盛り合わせ</h4>
+              <span class="price fw-bold">¥500</span>
+            </div>
+            <p class="mb-0 small">日替わりの小皿を彩り良く盛り合わせました。</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- ======================
-              Pasta（パスタ）
-        ======================= -->
-  <section class="menu-section">
-    <h2 id="pasta">パスタ</h2>
-    <div class="menu-grid">
-      <div class="menu-card"> <img src="images/こだわり1絶品パスタ.jpg" alt="パスタ">
-        <div class="menu-desc">
-          <h4>クリームパスタ</h4>
-          <span class="price">¥1500</span>
-          <p>濃厚ソースがおすすめポイントです。</p>
+
+  <!-- Hot Dish -->
+  <section class="container py-4">
+    <h2 id="hotdish" class="section-title mb-3">温かい料理</h2>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/ガーリックトーストとワイン.jpg" alt="ガーリックトースト" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">ガーリックトースト</h4>
+              <span class="price fw-bold">¥400</span>
+            </div>
+            <p class="mb-0 small">赤ワインと相性抜群。追加に人気です。</p>
+          </div>
         </div>
       </div>
-      <div class="menu-card"> <img src="images/33730381_s.jpg" alt="パスタ2">
-        <div class="menu-desc">
-          <h4>本日のおすすめパスタ</h4>
-          <span class="price">¥1250~</span>
-          <p>素材に合わせた季節限定パスタをご用意しています。</p>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/アヒージョ.jpg" alt="アヒージョ" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">海老のアヒージョ</h4>
+              <span class="price fw-bold">¥2100</span>
+            </div>
+            <p class="mb-0 small">熱々のガーリックオイルで仕上げた定番の一品。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/国産牛ローストビーフオニオンソース.jpg" alt="ローストビーフ" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">国産牛ローストビーフ 温玉のせ</h4>
+              <span class="price fw-bold">¥2800</span>
+            </div>
+            <p class="mb-0 small">まろやかな温玉がとろけて、ワインとの相性も抜群の一皿です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/豚カシラ肉の柔らかグリル.jpg" alt="豚カシラ肉" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">豚カシラ肉の柔らかグリル</h4>
+              <span class="price fw-bold">¥1600</span>
+            </div>
+            <p class="mb-0 small">豚カシラをしっとり柔らかく焼き上げ、ハーブ香るオイルで仕上げました。</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- ======================
-              course（コース）
-        ======================= -->
-  <section class="menu-section">
-    <h2 id="course">コース</h2>
-    <div class="menu-grid">
-      <div class="menu-card"> <img src="images/こだわり3コース料理.jpg" alt="コース">
-        <div class="menu-desc">
-          <h4>シェフおすすめコース</h4>
-          <span class="price">¥15000~</span>
-          <p>季節の食材を贅沢に使用し、前菜・温かい料理・メイン・パスタと続く全6品のコース。
-            素材の味わいを引き出した料理を、ゆったりとワインとともにお楽しみいただけます。
-            記念日や大切な方とのお食事にもおすすめです。</p>
+
+  <!-- Pasta -->
+  <section class="container py-4">
+    <h2 id="pasta" class="section-title mb-3">パスタ</h2>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/こだわり1絶品パスタ.jpg" alt="パスタ" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">クリームパスタ</h4>
+              <span class="price fw-bold">¥1500</span>
+            </div>
+            <p class="mb-0 small">濃厚ソースがおすすめポイントです。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="menu-card h-100">
+          <img src="images/33730381_s.jpg" alt="パスタ2" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">本日のおすすめパスタ</h4>
+              <span class="price fw-bold">¥1250~</span>
+            </div>
+            <p class="mb-0 small">素材に合わせた季節限定パスタをご用意しています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course -->
+  <section class="container py-4">
+    <h2 id="course" class="section-title mb-3">コース</h2>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="menu-card h-100">
+          <img src="images/こだわり3コース料理.jpg" alt="コース" class="menu-img">
+          <div class="p-3">
+            <div class="d-flex justify-content-between align-items-start gap-2">
+              <h4 class="h6 fw-bold mb-1">シェフおすすめコース</h4>
+              <span class="price fw-bold">¥15000~</span>
+            </div>
+            <p class="mb-0 small">
+              季節の食材を贅沢に使用し、前菜・温かい料理・メイン・パスタと続く全6品のコース。
+              素材の味わいを引き出した料理を、ゆったりとワインとともにお楽しみいただけます。
+              記念日や大切な方とのお食事にもおすすめです。
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner"> <small>© イタリアン Wine Bar ChibaTech</small> </div>
+
+<footer class="site-footer py-3">
+  <div class="container text-center text-white">
+    <small>© イタリアン Wine Bar ChibaTech</small>
+  </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
