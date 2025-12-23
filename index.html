@@ -1,147 +1,245 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>イタリアン Wine Bar ChibaTech</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>イタリアン Wine Bar ChibaTech</title>
+
+  <!-- Bootstrap (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your custom CSS (kept minimal) -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo-block"> <img src="images/rogo3.png" alt="Italian Wine Bar ChibaTech ロゴ"> </div>
-    <div class="header-info">
-      <p class="catch">イタリアン Wine Bar ChibaTech</p>
-      <p class="open-time">Today 17:00 – 23:00 / L.O. 22:30</p>
-      <p class="tel">Tel: 000-1234-5678</p>
+<body class="bg-warm">
+
+<!-- ===== Header / Navbar ===== -->
+<header class="site-header shadow-sm">
+  <div class="container py-3">
+    <div class="d-flex align-items-center gap-3">
+      <div class="logo-block">
+        <img src="images/rogo3.png" alt="Italian Wine Bar ChibaTech ロゴ" height="70">
+      </div>
+      <div class="header-info text-white">
+        <p class="mb-0 fw-bold fs-5">イタリアン Wine Bar ChibaTech</p>
+        <p class="mb-0 opacity-90">Today 17:00 – 23:00 / L.O. 22:30</p>
+        <p class="mb-0 fw-bold">Tel: 000-1234-5678</p>
+      </div>
     </div>
   </div>
-  
-  <!-- グローバルナビゲーション -->
-  <nav class="global-nav">
-    <ul class="nav-list">
-      <li><a href="index.html">ホーム</a></li>
-      
-      <!-- ドロップダウン付きメニュー -->
-      <li class="has-dropdown"> <a href="menu.html">メニュー</a>
-        <ul class="dropdown">
-          <li><a href="menu.html#antipasto">前菜</a></li>
-          <li><a href="menu.html#hotdish">温かい料理</a></li>
-          <li><a href="menu.html#pasta">パスタ</a></li>
-          <li><a href="menu.html#pasta">コース</a></li>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom border-gold">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#globalNav"
+              aria-controls="globalNav" aria-expanded="false" aria-label="ナビゲーションを切り替え">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="globalNav">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 fw-bold">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">ホーム</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="menu.html" id="menuDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              メニュー
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDrop">
+              <li><a class="dropdown-item" href="menu.html#antipasto">前菜</a></li>
+              <li><a class="dropdown-item" href="menu.html#hotdish">温かい料理</a></li>
+              <li><a class="dropdown-item" href="menu.html#pasta">パスタ</a></li>
+              <li><a class="dropdown-item" href="menu.html#course">コース</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="wine.html" id="wineDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ワイン
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="wineDrop">
+              <li><a class="dropdown-item" href="wine.html#red">Red Wine</a></li>
+              <li><a class="dropdown-item" href="wine.html#white">White Wine</a></li>
+              <li><a class="dropdown-item" href="wine.html#sparkling">Sparkling</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="access.html">アクセス</a>
+          </li>
         </ul>
-      </li>
-      <li class="has-dropdown"> <a href="wine.html">ワイン</a>
-        <ul class="dropdown">
-          <li><a href="wine.html#red">Red Wine</a></li>
-          <li><a href="wine.html#white">White Wine</a></li>
-          <li><a href="wine.html#sparkling">Sparkling</a></li>
-        </ul>
-      </li>
-      <li><a href="access.html">アクセス</a></li>
-    </ul>
+      </div>
+    </div>
   </nav>
 </header>
-<main> 
-  
-  <!-- ヒーローセクション -->
-  <section class="hero">
-    <div class="hero-image" role="img" aria-label="店内の雰囲気"></div>
-    <div class="hero-content"><br>
-      <img class="hero-top-img" src="images/rogo3.png" alt="ロゴ">
-      <h1>イタリアン Wine Bar ChibaTech</h1>
-      <p class="hero-text"> 千葉工大前の小さなワインバー。<br>
-        その日の気分に寄り添うグラスワインと、季節の料理をご用意しています。 </p>
-      <a href="menu.html" class="btn btn-main">料理を見る</a> <a href="wine.html" class="btn btn-ghost">ワインを見る</a> </div>
-  </section>
-  
-  <!-- コンセプト -->
-  <section id="concept" class="section section-concept">
-    <div class="section-inner two-column">
-      <div class="text-block">
-        <h2>コンセプト</h2>
-        <p> イタリアン Wine Bar ChibaTech は、千葉工業大学のそばで<br>
-          「ひとりでも、仲間とでも、気軽に寄れるワインバー」を目指しています。<br>
-          <br>
-          料理は、ワインに合わせた小皿料理が中心。<br>
-          授業や研究のあとに、ちょっと一杯だけでも立ち寄れる、<br>
-          そんな距離感のバーです。 </p>
-      </div>
-      <div class="image-block"> <img src="images/内装1.jpg" alt="内装"> </div>
-    </div>
-  </section>
-  
-  <!-- おすすめメニュー -->
-  <section id="commitment" class="section section-cards">
-    <div class="section-inner">
-      <h2>おすすめメニュー</h2>
-      <div class="card-grid">
-        <article class="card"> <img src="images/絶品アヒージョ人気メニュ0.jpg" alt="アヒージョ">
-          <div class="card-body">
-            <h3>季節の小皿料理</h3>
-            <p>絶品アヒージョや前菜盛り合わせなど、 <br>
-              ワインに合う小皿料理を季節ごとにご用意しております。</p>
-          </div>
-        </article>
-        <article class="card"> <img src="images/こだわり1絶品パスタ.jpg" alt="パスタ">
-          <div class="card-body">
-            <h3>自家製パスタ</h3>
-            <p>その日のソースに合わせてパスタをセレクト。軽めの一皿から〆の一皿まで。</p>
-          </div>
-        </article>
-        <article class="card"> <img src="images/こだわり2または4.jpg" alt="ワインボトル">
-          <div class="card-body">
-            <h3>グラスで楽しむワイン</h3>
-            <p>赤・白・スパークリングを中心に、常時 <br>
-              数種類をグラスで提供しています。</p>
-          </div>
-        </article>
+
+<main>
+
+  <!-- ===== Hero ===== -->
+  <section class="container my-4">
+    <div class="hero rounded-4 overflow-hidden shadow-lg position-relative">
+      <div class="hero-bg" role="img" aria-label="店内の雰囲気"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content text-center text-white position-relative p-4 p-md-5">
+        <img class="hero-top-img mb-3" src="images/rogo3.png" alt="ロゴ" width="160">
+        <h1 class="display-6 fw-bold mb-3">イタリアン Wine Bar ChibaTech</h1>
+        <p class="mx-auto mb-4" style="max-width: 560px;">
+          千葉工大前の小さなワインバー。<br>
+          その日の気分に寄り添うグラスワインと、季節の料理をご用意しています。
+        </p>
+
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <a href="menu.html" class="btn btn-main">料理を見る</a>
+          <a href="wine.html" class="btn btn-ghost">ワインを見る</a>
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- News & Campaign -->
-  <section id="news" class="section section-news">
-    <div class="section-inner">
-      <h2>ニュース　＆　キャンペーン</h2>
-      <div class="news-grid">
-        <article class="news-item"> <img src="images/こだわり2キャンペーン.jpg" alt="ペアリングSET">
-          <div class="news-body">
-            <p class="news-tag">キャンペーン</p>
-            <h3>スパークリングとおつまみ盛り</h3>
-            <p>週末限定で、スパークリングワインと <br>
-              おつまみ盛りのお得なセットをご用意しています。</p>
-          </div>
-        </article>
-        <article class="news-item"> <img src="images/クラフトビール.jpg" alt="クラフトビール">
-          <div class="news-body">
-            <p class="news-tag">ニュース</p>
-            <h3>クラフトビールも仲間入り</h3>
-            <p>ビール派の方にも楽しんでいただけるよう、樽生クラフトビールを数種類ご提供中です。</p>
-          </div>
-        </article>
+
+  <!-- ===== Concept ===== -->
+  <section id="concept" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-7">
+          <h2 class="section-title mb-3">コンセプト</h2>
+          <p class="mb-0">
+            イタリアン Wine Bar ChibaTech は、千葉工業大学のそばで<br>
+            「ひとりでも、仲間とでも、気軽に寄れるワインバー」を目指しています。<br><br>
+            料理は、ワインに合わせた小皿料理が中心。<br>
+            授業や研究のあとに、ちょっと一杯だけでも立ち寄れる、<br>
+            そんな距離感のバーです。
+          </p>
+        </div>
+        <div class="col-md-5">
+          <img class="img-fluid rounded-4 shadow" src="images/内装1.jpg" alt="内装">
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- Accessのダイジェスト（詳しくはaccess.htmlへ） -->
-  <section class="section section-access">
-    <div class="section-inner two-column">
-      <div class="text-block">
-        <h2>アクセス</h2>
-        <p> 千葉工業大学 正門から徒歩3分。<br>
-          授業や研究のあと、ふらっと立ち寄りやすい場所にあります。<br>
-          <br>
-          〒999－999　 千葉県奈良氏之市都田沼123<br>
-          平日 17:00〜23:00 / 土日祝 15:00〜23:00 / 定休日：火曜日 </p>
-        <a href="access.html" class="btn btn-main">詳しいアクセスを見る</a> </div>
-      <div class="image-block"> <img src="images/外観.jpg" alt="外観"> </div>
+
+  <!-- ===== Recommended menu (cards) ===== -->
+  <section id="commitment" class="py-5 bg-soft">
+    <div class="container">
+      <h2 class="section-title mb-4">おすすめメニュー</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <article class="card card-soft h-100">
+            <img src="images/絶品アヒージョ人気メニュ0.jpg" class="card-img-top" alt="アヒージョ">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">季節の小皿料理</h3>
+              <p class="mb-0">
+                絶品アヒージョや前菜盛り合わせなど、<br>
+                ワインに合う小皿料理を季節ごとにご用意しております。
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <article class="card card-soft h-100">
+            <img src="images/こだわり1絶品パスタ.jpg" class="card-img-top" alt="パスタ">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">自家製パスタ</h3>
+              <p class="mb-0">その日のソースに合わせてパスタをセレクト。軽めの一皿から〆の一皿まで。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <article class="card card-soft h-100">
+            <img src="images/こだわり2または4.jpg" class="card-img-top" alt="ワインボトル">
+            <div class="card-body">
+              <h3 class="h6 fw-bold">グラスで楽しむワイン</h3>
+              <p class="mb-0">
+                赤・白・スパークリングを中心に、常時<br>
+                数種類をグラスで提供しています。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- ===== News & Campaign ===== -->
+  <section id="news" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">ニュース　＆　キャンペーン</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <article class="card card-soft h-100">
+            <div class="row g-0">
+              <div class="col-5">
+                <img src="images/こだわり2キャンペーン.jpg" class="img-fit h-100 w-100 rounded-start" alt="ペアリングSET">
+              </div>
+              <div class="col-7">
+                <div class="card-body">
+                  <span class="badge bg-brand mb-2">キャンペーン</span>
+                  <h3 class="h6 fw-bold">スパークリングとおつまみ盛り</h3>
+                  <p class="mb-0">
+                    週末限定で、スパークリングワインと<br>
+                    おつまみ盛りのお得なセットをご用意しています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-6">
+          <article class="card card-soft h-100">
+            <div class="row g-0">
+              <div class="col-5">
+                <img src="images/クラフトビール.jpg" class="img-fit h-100 w-100 rounded-start" alt="クラフトビール">
+              </div>
+              <div class="col-7">
+                <div class="card-body">
+                  <span class="badge bg-brand mb-2">ニュース</span>
+                  <h3 class="h6 fw-bold">クラフトビールも仲間入り</h3>
+                  <p class="mb-0">ビール派の方にも楽しんでいただけるよう、樽生クラフトビールを数種類ご提供中です。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Access digest ===== -->
+  <section class="py-5 bg-soft">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-7">
+          <h2 class="section-title mb-3">アクセス</h2>
+          <p class="mb-4">
+            千葉工業大学 正門から徒歩3分。<br>
+            授業や研究のあと、ふらっと立ち寄りやすい場所にあります。<br><br>
+            〒999－999　 千葉県奈良氏之市都田沼123<br>
+            平日 17:00〜23:00 / 土日祝 15:00〜23:00 / 定休日：火曜日
+          </p>
+          <a href="access.html" class="btn btn-main">詳しいアクセスを見る</a>
+        </div>
+        <div class="col-md-5">
+          <img class="img-fluid rounded-4 shadow" src="images/外観.jpg" alt="外観">
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer class="site-footer">
-  <div class="footer-inner"> <small>© イタリアン Wine Bar ChibaTech</small> </div>
+
+<footer class="site-footer py-3">
+  <div class="container text-center text-white">
+    <small>© イタリアン Wine Bar ChibaTech</small>
+  </div>
 </footer>
+
+<!-- Bootstrap (JS) ※ dropdown を動かすため必須 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
