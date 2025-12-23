@@ -8,12 +8,13 @@
   <!-- Bootstrap (CSS) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Your custom CSS (kept minimal) -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body class="bg-warm">
 
+<!-- ===== Header ===== -->
 <header class="site-header shadow-sm">
   <div class="container py-3">
     <div class="d-flex align-items-center gap-3">
@@ -28,10 +29,12 @@
     </div>
   </div>
 
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom border-gold">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#globalNav"
-              aria-controls="globalNav" aria-expanded="false" aria-label="ナビゲーションを切り替え">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#globalNav" aria-controls="globalNav"
+              aria-expanded="false" aria-label="ナビゲーションを切り替え">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -40,10 +43,11 @@
           <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="menu.html" id="menuDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="menu.html" id="menuDrop"
+               role="button" data-bs-toggle="dropdown" aria-expanded="false">
               メニュー
             </a>
-            <ul class="dropdown-menu" aria-labelledby="menuDrop">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="menu.html#antipasto">前菜</a></li>
               <li><a class="dropdown-item" href="menu.html#hotdish">温かい料理</a></li>
               <li><a class="dropdown-item" href="menu.html#pasta">パスタ</a></li>
@@ -52,10 +56,11 @@
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="wine.html" id="wineDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="wine.html" id="wineDrop"
+               role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ワイン
             </a>
-            <ul class="dropdown-menu" aria-labelledby="wineDrop">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#red">Red Wine</a></li>
               <li><a class="dropdown-item" href="#white">White Wine</a></li>
               <li><a class="dropdown-item" href="#sparkling">Sparkling</a></li>
@@ -69,9 +74,10 @@
   </nav>
 </header>
 
+<!-- ===== Main ===== -->
 <main class="py-5">
 
-  <!-- Page heading -->
+  <!-- Page Title -->
   <section class="container mb-4">
     <h2 class="section-title mb-2">ワイン</h2>
     <p class="mb-0">
@@ -80,9 +86,11 @@
     </p>
   </section>
 
-  <!-- Red -->
+  <!-- ===== Red Wine ===== -->
   <section id="red" class="container py-4">
     <div class="row align-items-center g-4">
+
+      <!-- 左：説明＋表 -->
       <div class="col-md-7">
         <h3 class="h5 fw-bold mb-3">Red Wine</h3>
 
@@ -113,20 +121,34 @@
           </table>
         </div>
 
-        <p class="mb-0">しっかりとした味わいの赤ワインは、肉料理やチーズとの相性が抜群です。</p>
+        <p class="mb-0">
+          しっかりとした味わいの赤ワインは、肉料理やチーズとの相性が抜群です。
+        </p>
       </div>
 
+      <!-- 右：動画 -->
       <div class="col-md-5">
-        <img class="img-fluid rounded-4 shadow wine-photo" src="images/ガーリックトーストとワイン.jpg" alt="赤ワインとガーリックトースト">
+        <video
+          src="images/ワイン.mp4"
+          class="img-fluid rounded-4 shadow"
+          controls
+          muted
+          playsinline>
+          お使いのブラウザは動画タグに対応していません。
+        </video>
       </div>
+
     </div>
   </section>
 
-  <!-- White -->
+  <!-- ===== White Wine ===== -->
   <section id="white" class="container py-4">
     <div class="row align-items-center g-4">
+
       <div class="col-md-5 order-md-1 order-2">
-        <img class="img-fluid rounded-4 shadow wine-photo" src="images/こだわり2または4.jpg" alt="ワインボトルの並ぶ棚">
+        <img src="images/こだわり2または4.jpg"
+             alt="白ワイン"
+             class="img-fluid rounded-4 shadow">
       </div>
 
       <div class="col-md-7 order-md-2 order-1">
@@ -159,14 +181,18 @@
           </table>
         </div>
 
-        <p class="mb-0">さっぱりとした白ワインは、魚介や野菜を使ったお料理と一緒にどうぞ。</p>
+        <p class="mb-0">
+          さっぱりとした白ワインは、魚介や野菜を使ったお料理と一緒にどうぞ。
+        </p>
       </div>
+
     </div>
   </section>
 
-  <!-- Sparkling -->
+  <!-- ===== Sparkling ===== -->
   <section id="sparkling" class="container py-4">
     <div class="row align-items-center g-4">
+
       <div class="col-md-7">
         <h3 class="h5 fw-bold mb-3">Sparkling</h3>
 
@@ -191,39 +217,30 @@
           </table>
         </div>
 
-        <p class="mb-0">乾杯や特別な日にぴったりの一杯。前菜とのお得なセットもご用意しています。</p>
-      </div>
-
-      <div class="col-md-5">
-        <img class="img-fluid rounded-4 shadow wine-photo" src="images/こだわり5 (2).jpg" alt="スパークリングと前菜セット">
-      </div>
-    </div>
-  </section>
-
-  <!-- Other -->
-  <section id="other" class="container py-4">
-    <div class="row align-items-center g-4">
-      <div class="col-md-5">
-        <img class="img-fluid rounded-4 shadow wine-photo" src="images/クラフトビール.jpg" alt="クラフトビール">
-      </div>
-      <div class="col-md-7">
-        <h3 class="h5 fw-bold mb-3">Other Drinks</h3>
         <p class="mb-0">
-          クラフトビールやソフトドリンクもご用意しています。<br>
-          お酒が苦手な方も、気軽にお立ち寄りください。
+          乾杯や特別な日にぴったりの一杯。前菜とのお得なセットもご用意しています。
         </p>
       </div>
+
+      <div class="col-md-5">
+        <img src="images/こだわり5 (2).jpg"
+             alt="スパークリングワイン"
+             class="img-fluid rounded-4 shadow">
+      </div>
+
     </div>
   </section>
 
 </main>
 
+<!-- ===== Footer ===== -->
 <footer class="site-footer py-3">
   <div class="container text-center text-white">
     <small>© イタリアン Wine Bar ChibaTech</small>
   </div>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
