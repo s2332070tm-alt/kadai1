@@ -1,394 +1,107 @@
 @charset "utf-8";
-/* =========================
-   ベース設定
-   ========================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #F5EDE0;
-  color: #2B2B2B;
-  line-height: 1.8;
-}
-/* =========================
-   ヘッダー
-   ========================= */
-.site-header {
-  background-color: #7B1E3B;
-  color: #fff;
-}
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.logo-block img {
-  height: 70px;
-}
-.header-info {
-  font-size: 0.9rem;
-}
-.header-info .catch {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-.header-info .open-time {
-  opacity: 0.9;
-}
-.header-info .tel {
-  font-weight: bold;
-}
-/* =========================
-   グローバルナビ
-   ========================= */
-.global-nav {
-  background-color: #fff;
-  border-bottom: 2px solid #C9A227;
-}
-.nav-list {
-  max-width: 1100px;
-  margin: 0 auto;
-  list-style: none;
-  display: flex;
-  gap: 8px;
-}
-.nav-list > li {
-  position: relative;
-}
-.nav-list a {
-  display: block;
-  padding: 10px 18px;
-  text-decoration: none;
-  color: #7B1E3B;
-  font-weight: bold;
-  font-size: 0.95rem;
-  transition: background-color .3s, color .3s;
-}
-.nav-list > li:hover > a {
-  background-color: #7B1E3B;
-  color: #fff;
-}
-/* ドロップダウンメニュー */
-.has-dropdown .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 180px;
-  background-color: #fff;
-  border: 1px solid #C9A227;
-  border-radius: 8px;
-  display: none;
-  z-index: 10;
-}
-.has-dropdown:hover .dropdown {
-  display: block;
-}
-.dropdown li a {
-  padding: 8px 14px;
-  font-weight: normal;
-  color: #7B1E3B;
-  font-size: 0.9rem;
-}
-.dropdown li a:hover {
-  background-color: #F5EDE0;
+
+/* ===== Bootstrap を使う前提で、必要な「色・写真・細部」だけ残した最小CSS ===== */
+
+:root{
+  --brand:#7B1E3B;
+  --gold:#C9A227;
+  --warm:#F5EDE0;
+  --soft:#fff7ea;
 }
 
-/* ===== HERO（トップのボックス） ===== */
+.bg-warm{ background: var(--warm); }
+.bg-soft{ background: var(--soft); }
 
-.hero {
-  position: relative;
-  max-width: 1100px;
-  margin: 24px auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  height: 500px;  
-}
+.site-header{ background: var(--brand); }
+.site-footer{ background: var(--brand); }
 
+/* Bootstrap border に合わせた金色ライン */
+.border-gold{ border-color: var(--gold) !important; }
 
-.hero-image {
-  position: absolute;
-  inset: 0;  
-  background-image: url("../images/内装2.jpg"); 
-  background-size: cover;    
-  background-position: center;
-  filter: brightness(0.75);  
-  z-index: 0;
-}
+/* ナビの文字色をブランドに */
+.navbar .nav-link{ color: var(--brand); }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{ color: #fff; background: var(--brand); border-radius: .5rem; }
+.navbar .nav-link.active{ color: var(--brand); }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25); 
-  z-index: 1;
-}
-
-
-.hero-content {
-  position: relative;
-  z-index: 2;          
-  text-align: center;
-  top: 40px;           
-  color: #fff;
-}
-
-/* ロゴ画像 */
-.hero-top-img {
-  width: 160px;
-  margin: 0 auto 12px;
-  display: block;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
-/* ラベルとタイトルを少し目立たせる */
-.hero-label {
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #F2D37A;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.hero h1 {
-  font-size: 2.3rem;
-  margin-bottom: 12px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-/* 説明文 */
-.hero-text {
-  max-width: 520px;
-  margin: 0 auto 18px;
-  font-size: 0.95rem;
-}
-
-/* ボタンは内容サイズだけの幅で */
-.btn {
-  display: inline-block;
-  width: auto;
-  padding: 9px 24px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin: 0 6px;
-}
-
-
-/* =========================
-   ボタン
-   ========================= */
-.btn {
-  display: inline-block;
-  padding: 9px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-right: 8px;
-}
-.btn-main {
-  background-color: #C9A227;
-  color: #fff;
-}
-.btn-main:hover {
-  filter: brightness(1.1);
-}
-.btn-ghost {
-  border: 1px solid #fff;
-  color: #fff;
-}
-.btn-ghost:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-/* =========================
-   セクション共通
-   ========================= */
-.section {
-  margin-top: 40px;
-}
-.section-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-.section h2 {
-  color: #7B1E3B;
-  margin-bottom: 12px;
-  border-left: 8px solid #C9A227;
+/* 見出し（元の左ライン風） */
+.section-title{
+  color: var(--brand);
+  border-left: 8px solid var(--gold);
   padding-left: 10px;
 }
-/* 2カラムレイアウト */
-.two-column {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 24px;
-  align-items: center;
+
+/* ボタン（Bootstrapのbtnを上書きして元の見た目に寄せる） */
+.btn-main{
+  background: var(--gold);
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 18px;
+  text-decoration: none;
+  border: 0;
 }
-.image-block img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.btn-main:hover{ filter: brightness(1.1); color:#fff; }
+
+.btn-ghost{
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 18px;
+  text-decoration: none;
 }
-/* =========================
-   こだわりメニュー（カード）
-   ========================= */
-.section-cards {
-  margin-top: 40px;
+.btn-ghost:hover{ background: rgba(255,255,255,.15); color:#fff; }
+
+/* Hero（背景画像＋暗幕） */
+.hero{ min-height: 500px; }
+.hero-bg{
+  position:absolute; inset:0;
+  background-image:url("../images/内装2.jpg");
+  background-size:cover;
+  background-position:center;
+  filter: brightness(.75);
+  z-index:0;
 }
-.card-grid {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.hero-overlay{
+  position:absolute; inset:0;
+  background: rgba(0,0,0,.25);
+  z-index:1;
 }
-.card {
-  background-color: #fff;
+.hero-content{ z-index:2; }
+
+/* カードの角丸や影（課題の“こだわり”感） */
+.card-soft{
+  border: 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
 }
-.card img {
-  width: 100%;
+.card-soft .card-img-top{
   height: 200px;
   object-fit: cover;
-  display: block;
 }
-.card-body {
-  padding: 12px 14px 16px;
+
+/* News 画像のフィット */
+.img-fit{ object-fit: cover; }
+
+/* 料理カード（画像比率統一） */
+.menu-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
 }
-.card-body h3 {
-  margin-bottom: 6px;
-  font-size: 1rem;
-}
-/* =========================
-   News & Campaign
-   ========================= */
-.section-news .news-grid {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-.news-item {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-}
-.news-item img {
-  width: 100%;
-  height: 100%;
+.menu-img{
+  width:100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  display:block;
 }
-.news-body {
-  padding: 10px 14px;
-  font-size: 0.9rem;
-}
-.news-tag {
-  display: inline-block;
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background-color: #7B1E3B;
-  color: #fff;
-  margin-bottom: 4px;
-}
-/* =========================
-   Access
-   ========================= */
-.section-access p {
-  font-size: 0.95rem;
-}
-/* =========================
-   Food Menu（料理ページ）追加
-   ========================= */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 20px;
-}
-.menu-card {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-.menu-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;    /* ★縦横比を統一（4:3） */
-  object-fit: cover;      /* きれいにトリミング */
-  display: block;
-  border-radius: 12px 12px 0 0;
-}
-.menu-desc {
-  padding: 10px 14px 14px;
-}
-.menu-desc h4 {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
-}
-.menu-desc .price {
-  color: #C9A227;
-  font-weight: bold;
-}
-/* =========================
-       Wine ページ専用
-   ========================= */
-#wine-page .image-block {
-  max-width: 260px;
-}
-#wine-page .image-block img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-/* =========================
-   スマホ対応
-   ========================= */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-list {
-    flex-wrap: wrap;
-    padding: 0 8px 4px;
-  }
-  .hero {
-    margin: 16px;
-  }
-  .hero-image {
-    height: 260px;
-  }
-  .two-column {
-    grid-template-columns: 1fr;
-  }
-  .card-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  /* 料理ページ：2列 */
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 480px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
+.price{ color: var(--gold); }
+
+/* ワイン写真を少し小さめに（元のmax-width 260px相当） */
+.wine-photo{ max-width: 260px; }
+
+/* スマホのとき hero を少し低く */
+@media (max-width: 768px){
+  .hero{ min-height: 320px; }
 }
